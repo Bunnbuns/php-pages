@@ -21,7 +21,7 @@
 .this .hero {
     height: calc(7rem + 64px);
     background-color: #2175F4;
-    background-image: url(/bg-blue.png);
+    background-image: url(/static/images/bg-blue.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
