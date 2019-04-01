@@ -1,0 +1,232 @@
+.note-light {
+    background-color: #e5e9ec;
+    padding: 8px 10px;
+    border: 1px solid #c9d1da;
+    border-radius: 5px;
+}
+
+.note-light.yellow {
+    background-color: #fdf6e4;
+    border: 1px solid #afaba0;
+}
+
+.this {
+    -webkit-font-smoothing: antialiased;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;
+}
+
+.this .hero {
+    height: calc(7rem + 64px);
+    background-color: #2175F4;
+    background-image: url(/bg-blue.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.this .hero-text {
+    display: block;
+    text-align: center;
+    line-height: 6.5rem;
+    vertical-align: middle;
+    margin: auto auto auto 3.5rem;
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 2.75rem;
+    font-weight: 600;
+    text-shadow: -1px 1px 8px rgba(0,0,0,0.6);
+    /*font-family:monospace;*/
+}
+
+.this .page-content {
+    margin: 0;
+    padding: 12px 8px 3rem 8px;
+    background-color: #eee;
+}
+
+.this h1.title {
+    color: rgba(0,0,0,0.88);
+    font-weight: 600;
+    margin-left: 3.5rem;
+    margin-top: 1rem;
+}
+
+.this .pages {
+    padding: 0;
+    margin: 0 3rem;
+}
+
+.this .page {
+    margin: 0 0 .5rem 0;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.this .page:hover {
+    border-color: rgba(0,0,0,0.5);
+}
+
+.this .page:focus {
+    border-color: rgb(0,0,0);
+}
+
+.this .page:active {
+    border-color: rgb(0,0,0);
+}
+
+.this .page .content {
+    padding: 1rem 0 .5rem 1.25rem;
+}
+
+.this .page h1, .this .page h2, .this .page h3 {
+    margin: 0;
+    font-weight: 500;
+    color: rgba(0,0,0,0.82);
+}
+
+.this .page p {
+    margin: .75rem 0 0 0;
+    color: rgba(0,0,0,0.7);
+}
+
+.this .page .page-bottom {
+    margin: .7rem 0 0 0;
+    padding: .5rem .75rem .5rem 1.25rem;
+    border-radius: 0 0 5px 5px;
+    font-size: .9rem;
+    color: rgba(0,0,0,0.7);
+    background-color: rgba(240, 244, 248, 0.8);
+    vertical-align: middle;
+}
+
+.this .page .pfp {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    border-radius: 5px;
+    vertical-align: middle;
+}
+
+.this .page .pfp-text {
+    margin-left: 2px;
+    line-height: 28px;
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+.this .pfp-date {
+    float: right;
+    vertical-align: middle;
+    font-size: .8rem;
+    color: rgba(0,0,0,0.65);
+    margin: 0;
+}
+
+.this .tag {
+    background-color: rgb(234, 241, 253);
+    color: rgba(0,0,0,0.73);
+    padding: 4px 11px;
+    border: 1px solid rgb(210, 223, 244);
+    border-radius: 3px;
+    margin: 0 0 0 4px;
+    font-size: .9rem;
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+.this .tag-area {
+    margin: .75rem 0 1.25rem 0;
+}
+
+.this .user-info-area {
+    margin: 1.4rem 0;
+}
+
+
+.this .user-info-area a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.this .pfp {
+    width: 42px;
+    height: 42px;
+    margin-right: 3px;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+
+/* --- Media stuff ---*/
+@media screen and (max-width: 1000px) {
+    .this .pages {
+        margin:0 2.5rem;
+    }
+
+    .this h1.title {
+        margin-left: 2.5rem;
+    }
+
+    .this .hero-text {
+        margin-left: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .this .pages {
+        margin:0 2rem;
+    }
+
+    .this h1.title {
+        margin-left: 2rem;
+    }
+
+    .this .hero-text {
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .this .pages {
+        margin:0 1rem;
+    }
+
+    .this h1.title {
+        margin-left: 1rem;
+    }
+
+    .this .hero-text {
+        margin-left: 1rem;
+        font-weight: 500;
+    }
+
+    .this .hero {
+        background-size: auto;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .this .pages {
+        margin:0;
+    }
+
+    .this h1.title {
+        margin-left: 0;
+    }
+
+    .this .hero-text {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .this .hero {
+        height:calc(7rem + 56px);
+    }
+}
