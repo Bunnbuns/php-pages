@@ -33,7 +33,7 @@
       <h2>Title</h2>
         <p>Thigngs</p></div>
       <div class="page-bottom">
-        <img class="pfp" src="http://topgunurl.tk/pages/pfp/1.png">
+        <img class="pfp" src="http://topgunurl.tk/pages/pfp/Bunnbuns.png">
         <span class="pfp-text">Ben B <span class="pfp-date">
                 <span class="tag">Tag 1</span>
             </span></span></div>
