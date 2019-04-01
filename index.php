@@ -1,5 +1,5 @@
 <?php
-
+include('inc/common.inc.php');
 ?>
 <!doctype html>
 <html>
