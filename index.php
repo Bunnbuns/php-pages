@@ -36,6 +36,7 @@
         <img class="pfp" src="http://topgunurl.tk/pages/pfp/Bunnbuns.png">
         <span class="pfp-text">Ben B <span class="pfp-date">
                 <span class="tag">Tag 1</span>
+                <span class="tag">Tag 2</span>
             </span></span></div>
     </div></a>
 
