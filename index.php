@@ -1,5 +1,6 @@
 <?php
 include('inc/common.inc.php');
+echo testing
 ?>
 <!doctype html>
 <html>
