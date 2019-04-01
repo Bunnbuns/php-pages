@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!doctype html>
 <html>
   <head>
@@ -12,6 +9,7 @@
 <meta name="msapplication-TileColor" content="#455a64">
 <meta name="theme-color" content="#455a64">
     <!-- css -->
+    <link href="/static/css/mui.min.css" rel="stylesheet" type="text/css" />
     <link href="/static/css/main.css" rel="stylesheet" type="text/css" />
 <style>
 
@@ -28,27 +26,18 @@
 <div class="page-content">
   <div class="pages">
       <div class="note-light yellow" style="margin-bottom:.5rem;font-weight:500;">Pages is not completed! Check back later.</div>
-    <?php 
-    if ($result && $statement->rowCount() > 0) {
-        foreach ($result as $row) { ?>
 
-      <a style="text-decoration:none;" href="<?php echo str_replace(' ', '_', $row['title']); ?>">
+      <a style="text-decoration:none;" href="#">
     <div class="page">
       <div class="content">
-      <h2><?php echo escape($row['title']); ?></h2>
-        <p><?php echo escape($row['content']); ?></p></div>
+      <h2>Title</h2>
+        <p>Thigngs</p></div>
       <div class="page-bottom">
-        <img class="pfp" src="pfp/<?php echo getUserInfo($row['username'])[0]['profile_pic']; ?>">
-        <span class="pfp-text"><?php echo escape(getUserInfo($row['username'])[0]['name']); ?> <span class="pfp-date">
-            <?php $tags = explode(":",$row['tags']); foreach ($tags as $tag) { ?>
-                <span class="tag"><?php echo escape($tag); ?></span>
-            <?php } ?>
+        <img class="pfp" src="topgunurl.tk/pages/pfp/1.png">
+        <span class="pfp-text">Ben B <span class="pfp-date">
+                <span class="tag">Tag 1</span>
             </span></span></div>
     </div></a>
-      <?php
-        }
-    }
-    ?>
 
  <!--     
     <div class="page">
