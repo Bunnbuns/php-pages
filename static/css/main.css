@@ -9,6 +9,19 @@ nav{
     background-image: url(/static/images/bg-blue-light.png);
     background-size: cover;
 }
+/*-- colors --*/
+input:not([type]):focus:not([readonly]),input[type=text]:not(.browser-default):focus:not([readonly]),input[type=password]:not(.browser-default):focus:not([readonly]),input[type=email]:not(.browser-default):focus:not([readonly]),input[type=url]:not(.browser-default):focus:not([readonly]),input[type=time]:not(.browser-default):focus:not([readonly]),input[type=date]:not(.browser-default):focus:not([readonly]),input[type=datetime]:not(.browser-default):focus:not([readonly]),input[type=datetime-local]:not(.browser-default):focus:not([readonly]),input[type=tel]:not(.browser-default):focus:not([readonly]),input[type=number]:not(.browser-default):focus:not([readonly]),input[type=search]:not(.browser-default):focus:not([readonly]),textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #1565C0;
+    -webkit-box-shadow: 0 1px 0 0 #1565C0;
+    box-shadow: 0 1px 0 0 #1565C0
+}
+
+input:not([type]):focus:not([readonly])+label,input[type=text]:not(.browser-default):focus:not([readonly])+label,input[type=password]:not(.browser-default):focus:not([readonly])+label,input[type=email]:not(.browser-default):focus:not([readonly])+label,input[type=url]:not(.browser-default):focus:not([readonly])+label,input[type=time]:not(.browser-default):focus:not([readonly])+label,input[type=date]:not(.browser-default):focus:not([readonly])+label,input[type=datetime]:not(.browser-default):focus:not([readonly])+label,input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label,input[type=tel]:not(.browser-default):focus:not([readonly])+label,input[type=number]:not(.browser-default):focus:not([readonly])+label,input[type=search]:not(.browser-default):focus:not([readonly])+label,textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #1565C0
+}
+a {
+    color: #1565C0;
+}
 /*-- Pages --*/
 .this .page-content {
     margin: 0;
@@ -130,8 +143,27 @@ nav{
     vertical-align: middle;
     border-radius: 4px;
 }
+/*-- flex grow --*/
+.grow-container{
+    display: flex;
+    resize: none;
+}
+.grow{
+    align-items: center;
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
+/*-- titles --*/
+.form-title{
+    margin:2rem auto 2rem auto;
+}
 
-
+/*-- forms --*/
+.form-link{
+    vertical-align: middle
+/*    margin:.5rem 0 0 0;*/
+}
 
 
 

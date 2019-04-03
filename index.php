@@ -57,21 +57,40 @@ include('inc/common.inc.php');
     </div>
   </div>
 <div class="container">
-  <h5>Latest pages</h5>
-    <div class="this">
-        <div class="page">
-          <div class="content">
-          <h5>This is a page</h5>
-            <p>A description about this page for you to read and enjoy...</p></div>
-          <div class="page-bottom">
-            <img class="pfp" style="max-height:50px;" src="https://benworld.net/protected/u/default.png">
-            <span class="pfp-text">A_Guy <span class="pfp-date">
-                    <span class="tag">First</span><span class="tag">Page</span>
-                </span></span></div>
+    <h4 class="form-title center">Sign Up</h4>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
         </div>
-    </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+        <div class="grow-container">
+        <button class="waves-effect waves-light btn blue darken-3">Submit<i class="material-icons right">send</i></button>
+        <div class="grow"></div><a class="form-link" href="#">Have an account?</a>
+        </div>
+    </form>
+  </div>
 </div>
 
+<br /><br /><br />
 <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="/static/js/materialize.min.js"></script>
 <script>
