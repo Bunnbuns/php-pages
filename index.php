@@ -49,7 +49,7 @@ include('inc/common.inc.php');
           <h5 class="header col s12 light">A place to share information with pages and comments</h5>
         </div>
         <div class="row center">
-          <a href="#" id="download-button" class="btn-large waves-effect waves-light blue darken-3">Get Started</a>
+          <a href="test.php" id="download-button" class="btn-large waves-effect waves-light blue darken-3">Get Started</a>
         </div>
         <br><br><br>
 

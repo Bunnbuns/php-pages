@@ -28,7 +28,7 @@ include('inc/common.inc.php');
 <body>
   <nav class=" blue darken-3" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Topgun09</a>
+      <a id="logo-container" href="#" class="brand-logo"><img style="padding:16px;" src="/static/logos/white-32.png"></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Login</a></li>
       </ul>
@@ -41,53 +41,23 @@ include('inc/common.inc.php');
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-<div class="hero blue lighten-4">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <h1 class="header center blue-text text-darken-3">Pages</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">A place to share information with pages and comments</h5>
-        </div>
-        <div class="row center">
-          <a href="#" id="download-button" class="btn-large waves-effect waves-light blue darken-3">Get Started</a>
-        </div>
-        <br><br><br>
-
-      </div>
-    </div>
-  </div>
+<div class="main-hero">
+  <h1 class="main-hero-text header center">Pages</h1>
+</div>
+<div class="this">
 <div class="container">
-    <h4 class="form-title center">Sign Up</h4>
-  <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">Full Name</label>
+<br />
+        <div class="page">
+          <div class="content">
+          <h5>This is a page</h5>
+            <p>A description about this page for you to read and enjoy...</p></div>
+          <div class="page-bottom">
+            <img class="pfp" src="https://benworld.net/protected/u/default.png">
+            <span class="pfp-text">A_Guy <span class="pfp-date">
+                    <span class="tag">First</span><span class="tag">Page</span>
+                </span></span></div>
         </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Username</label>
-        </div>
-      </div>
-      <div class="row">
-          <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-      </div>
-        <div class="grow-container">
-        <button class="waves-effect waves-light btn blue darken-3">Submit<i class="material-icons right">send</i></button>
-        <div class="grow"></div><a class="form-link" href="#">Have an account?</a>
-        </div>
-    </form>
-  </div>
+    </div>
 </div>
 
 <br /><br /><br />
