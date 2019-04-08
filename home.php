@@ -25,25 +25,9 @@ include('inc/common.inc.php');
 }
 </style>
 </head>
-<body>
-  <nav class=" blue darken-3" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo"><img style="padding:16px;" src="/static/logos/white-32.png"></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Login</a></li>
-      </ul>
+<body class="grey-bg">
+<?php include('inc/navbar.inc.php'); ?>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Sign Up</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-<div class="main-hero">
-  <h1 class="main-hero-text header center">Pages</h1>
-</div>
 <div class="this">
 <div class="container">
 <br />
@@ -60,7 +44,7 @@ include('inc/common.inc.php');
     </div>
 </div>
 
-<br /><br /><br />
+
 <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="/static/js/materialize.min.js"></script>
 <script>
