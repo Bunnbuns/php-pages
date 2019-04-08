@@ -17,6 +17,11 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 } catch(PDOException $error) {
     echo $sql . "<br />" . $error->getMessage() . '';
 	}
+if($result && $statement->rowCount() > 0){
+    $error = "not_found";
+}else{
+    $error = null;
+}
 ?>
 <!doctype html>
 <html>
@@ -24,7 +29,7 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pages User</title>
+    <title><?php echo ($error !== "not_found") ? "User not found" : $username ?></title>
 <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
@@ -49,7 +54,7 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 <br />
 <div class="user-page">
 <?php
-    if ($result && $statement->rowCount() > 0) {
+    if ($error == 'not_found') {
 ?>
     <img class="pfp large" src="https://benworld.net/protected/u/<?= getUserInfo($username)[0]['profile_pic']; ?>">
     <div class="name-area">
