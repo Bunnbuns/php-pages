@@ -58,7 +58,7 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
       <h5><?= escape($row['title']) ?></h5>
         <p><?= escape($row['content']) ?></p></div>
       <div class="page-bottom">
-        <img class="pfp" src="https://benworld.net/protected/u/<?= getUserInfo($row['username'])[0]['profile_pic']; ?>">
+        <img class="pfp" src="https://apis.buncode.com/pages/pfp/<?= getUserInfo($row['username'])[0]['profile_pic']; ?>">
         <span class="pfp-text"><a class="user-link" href="user.php?username=<?= $row['username'] ?>"><?= escape(getUserInfo($row['username'])[0]['name']); ?></a> <span class="pfp-date">
             <?php $tags = explode(":",$row['tags']); foreach ($tags as $tag) { ?>
                 <span class="tag"><?= escape($tag) ?></span>

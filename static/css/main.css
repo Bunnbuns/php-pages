@@ -215,10 +215,6 @@ a {
     vertical-align: middle
 /*    margin:.5rem 0 0 0;*/
 }
-/*-- shadows --*/
-.z-depth-0{
-    box-shadow: none;
-}
 /*-- paddings --*/
 .nav-img{
     padding:16px;
@@ -241,6 +237,11 @@ a {
     height: 75px;
     margin-right: .5rem
 }
+.user-page::before{
+    height: 50px;
+    width: 60px;
+    background-color: antiquewhite
+}
 .user-page{
     
 }
@@ -262,6 +263,18 @@ a {
     color:rgba(0,0,0,0.6);
     line-height: 0;
     margin:.5rem 0;
+}
+.user-page .bio-area{
+    display: block
+}
+.user-page .bio{
+    display: inline-block;
+    margin:1.5rem 0 0 0;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    font-size: .875rem;
+    background-color: rgba(235,235,235,1);
+    font-family: monospace, monospace;
 }
 
 

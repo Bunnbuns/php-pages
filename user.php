@@ -56,13 +56,15 @@ if($result && $statement->rowCount() > 0){
 <?php
     if ($error == 'not_found') {
 ?>
-    <img class="pfp large" src="https://benworld.net/protected/u/<?= getUserInfo($username)[0]['profile_pic']; ?>">
+    <img class="pfp large" src="https://apis.buncode.com/pages/pfp/<?= getUserInfo($username)[0]['profile_pic']; ?>">
     <div class="name-area">
         <span class="name"><?= escape(getUserInfo($username)[0]['name']); ?></span>
         <span class="username"><?= $username; ?></span>
     </div>
-    <div class="bio">
-    <?= $result[0]['bio'] ?>
+    <div class="bio-area">
+        <div class="bio">
+            <?= $result[0]['bio'] ?>
+        </div>
     </div>
 <?php   
     }else{

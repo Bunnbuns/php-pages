@@ -33,7 +33,7 @@ include('inc/common.inc.php');
       <div class="container">
         <h1 class="header center blue-text text-darken-3">Pages</h1>
         <div class="row center">
-          <h5 class="header col s12 light">A place to share information with pages and comments</h5>
+          <h5 class="header col s12 light">A place to share information</h5>
         </div>
         <div class="row center">
           <a href="home.php" id="download-button" class="btn-large waves-effect waves-light blue darken-3">Get Started</a>
