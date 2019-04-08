@@ -1,2 +1,2 @@
 # php-pages
-just starting on the project
+Lets you add to a table of "pages" and view other user's pages
