@@ -47,7 +47,7 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 <div class="container">
 <br />
       <div class="pages">
-      <div class="note-light yellow-bg" style="margin-bottom:.5rem;font-weight:500;">Pages is not completed! Check back later.</div>
+      <!--<div class="note-light yellow-bg" style="margin-bottom:.5rem;font-weight:500;">Pages is not completed! Check back later.</div>-->
     <?php 
     if ($result && $statement->rowCount() > 0) {
         foreach ($result as $row) { ?>
@@ -61,12 +61,22 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         <img class="pfp" src="https://benworld.net/protected/u/<?= getUserInfo($row['username'])[0]['profile_pic']; ?>">
         <span class="pfp-text"><a class="user-link" href="user.php?username=<?= $row['username'] ?>"><?= escape(getUserInfo($row['username'])[0]['name']); ?></a> <span class="pfp-date">
             <?php $tags = explode(":",$row['tags']); foreach ($tags as $tag) { ?>
-                <span class="tag"><?php echo escape($tag); ?></span>
+                <span class="tag"><?= escape($tag) ?></span>
             <?php } ?>
             </span></span></div>
     </div></a>
       <?php
         }
+    }else{ //no pages
+    ?>
+        <h4 class="center red-text text-darken-4">No pages to show</h4>
+        <h6 class="center">Try refreshing the page or create one.</h6>
+        <br />
+        <div class="center">
+            <a class="btn blue darken-2" href="/">Home</a>
+            <a class="btn blue darken-2" href="<?= basename($_SERVER["SCRIPT_FILENAME"], '.php') ?>.php">Reload</a>
+        </div>
+    <?php
     }
     ?>
     
