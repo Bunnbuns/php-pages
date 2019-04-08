@@ -237,10 +237,20 @@ a {
     height: 75px;
     margin-right: .5rem
 }
-.user-page::before{
-    height: 50px;
-    width: 60px;
-    background-color: antiquewhite
+.pfp.large-2{
+    width: 90px;
+    height: 90px;
+    margin-right: .5rem
+}
+.pfp.large-3{
+    width: 120px;
+    height: 120px;
+    margin-right: .5rem
+}
+.pfp.large-4{
+    width: 150px;
+    height: 150px;
+    margin-right: .5rem
 }
 .user-page{
     
@@ -251,18 +261,18 @@ a {
 }
 .user-page .name{
     display: inline-block;
-    font-size: 1.64rem;
+    font-size: 1.975rem;
     font-weight: 600;
     line-height: 0;
-    margin:.5rem 0;
+    margin:.6rem 0;
 }
 .user-page .username{
     display: block;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 500;
     color:rgba(0,0,0,0.6);
     line-height: 0;
-    margin:.5rem 0;
+    margin:.6rem 0;
 }
 .user-page .bio-area{
     display: block

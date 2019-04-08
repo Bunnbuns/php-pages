@@ -29,7 +29,7 @@ if($result && $statement->rowCount() > 0){
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= ($error !== "not_found") ? "User not found" : $username ?></title>
+    <title><?= ($error !== "not_found") ? "User not found" : escape($username) ?></title>
 <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
@@ -56,14 +56,14 @@ if($result && $statement->rowCount() > 0){
 <?php
     if ($error == 'not_found') {
 ?>
-    <img class="pfp large" src="https://apis.buncode.com/pages/pfp/<?= getUserInfo($username)[0]['profile_pic']; ?>">
+    <img class="pfp large-3" src="https://apis.buncode.com/pages/pfp/<?= escape(getUserInfo($username)[0]['profile_pic']); ?>">
     <div class="name-area">
         <span class="name"><?= escape(getUserInfo($username)[0]['name']); ?></span>
-        <span class="username"><?= $username; ?></span>
+        <span class="username"><?= escape($username); ?></span>
     </div>
     <div class="bio-area">
         <div class="bio">
-            <?= $result[0]['bio'] ?>
+            <?= escape($result[0]['bio']); ?>
         </div>
     </div>
 <?php   
