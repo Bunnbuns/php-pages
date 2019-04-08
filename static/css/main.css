@@ -36,6 +36,17 @@ a {
 .grey-bg{
     background-color: #f5f5f5;
 }
+/*-- notes --*/
+.note-light {
+    background-color: #e5e9ec;
+    padding: 8px 10px;
+    border: 1px solid #c9d1da;
+    border-radius: 5px;
+}
+.note-light.yellow-bg {
+    background-color: #ffefc4;
+    border: 1px solid #afaba0;
+}
 /*-- Pages --*/
 .this {
     -webkit-font-smoothing: antialiased;
