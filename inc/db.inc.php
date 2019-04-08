@@ -1,5 +1,5 @@
 <?php
-include('../../db-info.inc.php');
+include('../../db-info.inc.php'); // include db info //
 //$host       = "localhost";
 //$username   = "username";
 //$password   = "password";
