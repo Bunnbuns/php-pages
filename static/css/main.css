@@ -125,6 +125,12 @@ a {
     font-weight: 500;
 }
 
+.this .user-link{
+    display: inline;
+    line-height: inherit;
+    color: rgba(0,0,0,0.7); !important;
+}
+
 .this .pfp-date {
     float: right;
     vertical-align: middle;
@@ -134,9 +140,10 @@ a {
 }
 
 .this .tag {
+    display: inline-block;
     background-color: rgb(234, 241, 253);
     color: rgba(0,0,0,0.73);
-    padding: 4px 11px;
+    padding: 3px 11px;
     border: 1px solid rgb(210, 223, 244);
     border-radius: 3px;
     margin: 0 0 0 4px;
@@ -213,6 +220,9 @@ a {
     box-shadow: none;
 }
 /*-- paddings --*/
+.nav-img{
+    padding:16px;
+}
 .container2{
     margin:0 1.5rem;
 }
@@ -225,7 +235,34 @@ a {
 .pt-3{
     margin-top:.75rem;
 }
-
+/* -- User pages -- */
+.pfp.large{
+    width: 75px;
+    height: 75px;
+    margin-right: .5rem
+}
+.user-page{
+    
+}
+.user-page .name-area{
+    vertical-align: middle;
+    display: inline-block;
+}
+.user-page .name{
+    display: inline-block;
+    font-size: 1.64rem;
+    font-weight: 600;
+    line-height: 0;
+    margin:.5rem 0;
+}
+.user-page .username{
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color:rgba(0,0,0,0.6);
+    line-height: 0;
+    margin:.5rem 0;
+}
 
 
 
@@ -250,7 +287,11 @@ a {
         margin:0 1rem;
     }
 }
-
+@media screen and (max-width: 600px) {
+    .nav-img{
+        padding:12px;
+    }
+}
 @media screen and (max-width: 550px) {
     .this .pages {
         margin:0;

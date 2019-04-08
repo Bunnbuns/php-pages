@@ -6,11 +6,12 @@ include('inc/db.inc.php');
 
 try {
 $connection = new PDO($dsn, $username, $password, $options);
-    $sql = "SELECT `id`, `username`, `date`, `title`, `content`, `tags` 
-                    FROM pages 
-                    ORDER BY id DESC
-                    ";
+$sql = "SELECT id, name, username, email, bio, date 
+				FROM users
+				WHERE username = :username";
+$username = $_GET['username'];
 $statement = $connection->prepare($sql);
+$statement->bindParam(':username', $username, PDO::FETCH_ASSOC);
 $statement->execute();
 $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 } catch(PDOException $error) {
@@ -23,7 +24,7 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pages</title>
+    <title>Pages User</title>
 <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
@@ -46,29 +47,27 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 <div class="this">
 <div class="container">
 <br />
-      <div class="pages">
-      <div class="note-light yellow-bg" style="margin-bottom:.5rem;font-weight:500;">Pages is not completed! Check back later.</div>
-    <?php 
+<div class="user-page">
+<?php
     if ($result && $statement->rowCount() > 0) {
-        foreach ($result as $row) { ?>
-
-      <a style="text-decoration:none;" href="<?php echo str_replace(' ', '_', $row['title']); ?>">
-    <div class="page">
-      <div class="content">
-      <h5><?php echo escape($row['title']); ?></h5>
-        <p><?php echo escape($row['content']); ?></p></div>
-      <div class="page-bottom">
-        <img class="pfp" src="https://benworld.net/protected/u/<?= getUserInfo($row['username'])[0]['profile_pic']; ?>">
-        <span class="pfp-text"><a class="user-link" href="user.php?username=<?= $row['username'] ?>"><?= escape(getUserInfo($row['username'])[0]['name']); ?></a> <span class="pfp-date">
-            <?php $tags = explode(":",$row['tags']); foreach ($tags as $tag) { ?>
-                <span class="tag"><?php echo escape($tag); ?></span>
-            <?php } ?>
-            </span></span></div>
-    </div></a>
-      <?php
-        }
+?>
+    <img class="pfp large" src="https://benworld.net/protected/u/<?= getUserInfo($username)[0]['profile_pic']; ?>">
+    <div class="name-area">
+        <span class="name"><?= escape(getUserInfo($username)[0]['name']); ?></span>
+        <span class="username"><?= $username; ?></span>
+    </div>
+<?php   
+    }else{
+?>
+<h3 class="center red-text text-darken-4">User not found</h3>
+    <br />
+    <div class="center">
+        <a class="btn blue darken-2" href="/">Home</a>
+    </div>
+<?php
     }
-    ?>
+?>
+</div>
     
 <!--
         <div class="page">
