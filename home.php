@@ -55,8 +55,8 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
       <a style="text-decoration:none;" href="<?php echo str_replace(' ', '_', $row['title']); ?>">
     <div class="page">
       <div class="content">
-      <h5><?php echo escape($row['title']); ?></h5>
-        <p><?php echo escape($row['content']); ?></p></div>
+      <h5><?= escape($row['title']) ?></h5>
+        <p><?= escape($row['content']) ?></p></div>
       <div class="page-bottom">
         <img class="pfp" src="https://benworld.net/protected/u/<?= getUserInfo($row['username'])[0]['profile_pic']; ?>">
         <span class="pfp-text"><a class="user-link" href="user.php?username=<?= $row['username'] ?>"><?= escape(getUserInfo($row['username'])[0]['name']); ?></a> <span class="pfp-date">

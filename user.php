@@ -29,7 +29,7 @@ if($result && $statement->rowCount() > 0){
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo ($error !== "not_found") ? "User not found" : $username ?></title>
+    <title><?= ($error !== "not_found") ? "User not found" : $username ?></title>
 <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
@@ -60,6 +60,9 @@ if($result && $statement->rowCount() > 0){
     <div class="name-area">
         <span class="name"><?= escape(getUserInfo($username)[0]['name']); ?></span>
         <span class="username"><?= $username; ?></span>
+    </div>
+    <div class="bio">
+    <?= $result[0]['bio'] ?>
     </div>
 <?php   
     }else{
