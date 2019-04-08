@@ -1,5 +1,6 @@
 <?php
 include('inc/common.inc.php');
+include('inc/db.inc.php');
 
 ?>
 <!doctype html>

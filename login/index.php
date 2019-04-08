@@ -1,6 +1,9 @@
 <?php
-include('inc/common.inc.php');
+// LOGIN //
+include('../inc/common.inc.php');
+include('../inc/db.inc.php');
 
+// LOGIN //
 ?>
 <!doctype html>
 <html>
@@ -8,7 +11,7 @@ include('inc/common.inc.php');
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pages</title>
+    <title>Pages Login</title>
 <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
@@ -25,41 +28,16 @@ include('inc/common.inc.php');
 }
 </style>
 </head>
-<body>
-<?php include('inc/navbar.inc.php'); ?>
-    
-<div class="hero blue lighten-4">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <h1 class="header center blue-text text-darken-3">Pages</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">A place to share information with pages and comments</h5>
-        </div>
-        <div class="row center">
-          <a href="home.php" id="download-button" class="btn-large waves-effect waves-light blue darken-3">Get Started</a>
-        </div>
-        <br><br><br>
+<body class="grey-bg">
+<?php include('../inc/navbar.inc.php'); ?>
 
-      </div>
-    </div>
-  </div>
 <div class="container">
-    <h4 class="form-title center">Sign Up</h4>
+    <h4 class="form-title center">Login</h4>
   <div class="row">
     <form class="col s12">
       <div class="row">
-        <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
-          <label for="first_name">Full Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Username</label>
-        </div>
-      </div>
-      <div class="row">
           <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
+          <input id="email" type="email" class="validate" autofocus>
           <label for="email">Email</label>
         </div>
       </div>
@@ -71,13 +49,14 @@ include('inc/common.inc.php');
       </div>
         <div class="grow-container">
         <button class="waves-effect waves-light btn blue darken-3">Submit<i class="material-icons right">send</i></button>
-        <div class="grow"></div><a class="form-link" href="/login/">Have an account?</a>
+        <div class="grow"></div><a class="form-link" href="/">Don't have an account?</a>
         </div>
     </form>
   </div>
 </div>
 
-<br /><br /><br />
+
+
 <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="/static/js/materialize.min.js"></script>
 <script>
