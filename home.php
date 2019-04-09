@@ -52,7 +52,7 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
     if ($result && $statement->rowCount() > 0) {
         foreach ($result as $row) { ?>
 
-      <a style="text-decoration:none;" href="<?php echo escape(str_replace(' ', '_', $row['title'])); ?>">
+      <a style="text-decoration:none;" href="<?php echo str_replace(' ', '-', str_replace('_', '_', escape($row['title']))); ?>">
     <div class="page">
       <div class="content">
       <h5><?= escape($row['title']) ?></h5>

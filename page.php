@@ -10,7 +10,7 @@ try {
                     FROM pages 
                     WHERE title = :title
                     ";
-    $title = str_replace('_', ' ', $_GET['page']);
+    $title = str_replace('-', '_', str_replace('-', ' ', trim(urldecode($_SERVER["REQUEST_URI"]),'/')));
     
     $statement = $connection->prepare($sql);
     $statement->bindParam(':title', $title, PDO::FETCH_ASSOC);
@@ -19,6 +19,7 @@ try {
 } catch(PDOException $error) {
 echo $sql . "<br />" . $error->getMessage();
 	}
+echo escape($title);
 // --- Title --- //
 $title = escape($result[0]['title']);
 // --- Tags --- //
