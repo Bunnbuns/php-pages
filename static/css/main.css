@@ -20,6 +20,10 @@ img{
 .min-height{
     min-height: 100vh;
 }
+.inline-block{
+    display: inline-block;
+    vertical-align: middle;
+}
 /*-- colors --*/
 input:not([type]):focus:not([readonly]),input[type=text]:not(.browser-default):focus:not([readonly]),input[type=password]:not(.browser-default):focus:not([readonly]),input[type=email]:not(.browser-default):focus:not([readonly]),input[type=url]:not(.browser-default):focus:not([readonly]),input[type=time]:not(.browser-default):focus:not([readonly]),input[type=date]:not(.browser-default):focus:not([readonly]),input[type=datetime]:not(.browser-default):focus:not([readonly]),input[type=datetime-local]:not(.browser-default):focus:not([readonly]),input[type=tel]:not(.browser-default):focus:not([readonly]),input[type=number]:not(.browser-default):focus:not([readonly]),input[type=search]:not(.browser-default):focus:not([readonly]),textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid #1565C0;
@@ -232,6 +236,11 @@ a {
     margin-top:.75rem;
 }
 /* -- User pages -- */
+.pfp.medium{
+    width: 48px;
+    height: 48px;
+    margin-right: .25rem
+}
 .pfp.large{
     width: 75px;
     height: 75px;
@@ -286,6 +295,94 @@ a {
     background-color: rgba(235,235,235,1);
     font-family: monospace, monospace;
 }
+/* -- Page -- */
+.this .top-area {
+    padding: 2px 3rem 0 3rem;
+    background-color: rgba(240, 244, 248, 1);
+    border-bottom: 1px solid rgb(206, 216, 226);
+    margin-bottom: .25rem;
+}
+.this .tag {
+    background-color: rgb(234, 241, 253);
+    color: rgba(0,0,0,0.73);
+    padding: 4px 11px;
+    border: 1px solid rgb(210, 223, 244);
+    border-radius: 3px;
+    /*margin:0 0 0 4px;*/
+    margin: 0 4px 0 0;
+    font-size: .9rem;
+    vertical-align: middle;
+    font-weight: 500;
+    cursor: default;
+}
+.this .tag-area {
+    margin: .75rem 0 .75rem 0;
+}
+.this .tag-area .tag {
+    background-color: rgb(247, 250, 255);
+}
+.this .user-info-area {
+    margin: 1rem 0 1rem 0;
+}
+.this .user-info-area .name-area {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0;
+}
+.this .user-info-area .name {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(0,0,0,0.88);
+    line-height: 0;
+    margin: .75rem 0;
+}
+.this .user-info-area .username {
+    display: block;
+    vertical-align: middle;
+    font-size: .875rem;
+    font-weight: 400;
+    color:rgba(0,0,0,0.6);
+    line-height: 0;
+    margin: .5rem 0;
+}
+.this .user-info-area a {
+    text-decoration: none;
+    color: inherit;
+}
+.a-page {
+    font-size: 1.075rem;
+}
+.this .back {
+    margin: 0 0 1rem 0;
+}
+.this .back a {
+    color: #434343;
+    text-decoration: none;
+    background-color: #eef3ff;
+    padding: 4px 10px;
+    border: 1px solid #c0c9e2;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 0;
+}
+.this .back a:hover {
+    background-color: #f4f6fd;
+    border-color: #aeb7d0;
+}
+.this .back a:focus {
+    background-color: #eceef7;
+    border-color: #949cb4;
+}
+.this .date {
+    display: inline-block;
+    margin-top: .75rem;
+    font-size: .95rem;
+    font-weight: 400;
+    color: rgb(52, 52, 52);
+}
 
 
 
@@ -293,34 +390,71 @@ a {
 
 
 /* --- Media stuff ---*/
-@media screen and (max-width: 1000px) {
-    .this .pages {
-        margin:0 2.5rem;
-    }
-}
 
 @media screen and (max-width: 850px) {
     .this .pages {
         margin:0 2rem;
     }
+    .this h1.title {
+        margin-left: 2rem;
+    }
+    .this .hero-text {
+        margin-left: 2rem;
+    }
+    .this .hero-text-2 {
+        margin-left: 2rem;
+    }
+    .this .top-area {
+        padding: 2px 2rem 0 2rem;
+    }
 }
-
 @media screen and (max-width: 700px) {
     .this .pages {
         margin:0 1rem;
+        padding: 12px 0 3rem 0;
     }
-}
-@media screen and (max-width: 600px) {
-    .nav-img{
-        padding:12px;
+    .this h1.title {
+        margin-left: 1rem;
+    }
+    .this .hero-text {
+        margin-left: 1rem;
+        font-weight: 500;
+    }
+    .this .hero-text-2 {
+        margin-left: 1rem;
+    }
+    .this .top-area {
+        padding: 2px 1rem 0 1rem;
+    }
+    .this .hero {
+        background-size: auto;
     }
 }
 @media screen and (max-width: 550px) {
     .this .pages {
         margin:0;
+        padding: 12px 8px 3rem 8px;
+    }
+    .this h1.title {
+        margin-left: 0;
+    }
+    .this .hero-text {
+        margin-left: 1rem;
+    }
+    .this .hero-text-2 {
+        margin-left: 1rem;
+    }
+    .this .top-area {
+        padding: 2px 1rem 0 1rem;
     }
 }
-
 @media screen and (max-width: 479px) {
-
+    .this .hero {
+        height:calc(7rem + 56px);
+    }
+}
+@media screen and (max-width: 400px) {
+    .this .hero-text-2 {
+        margin-top:1rem;
+    }
 }

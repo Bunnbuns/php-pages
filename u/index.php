@@ -1,8 +1,8 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1); 
-include('inc/common.inc.php');
-include('inc/db.inc.php');
+include('../inc/common.inc.php');
+include('../inc/db.inc.php');
 
 try {
 $connection = new PDO($dsn, $username, $password, $options);
@@ -47,7 +47,7 @@ if($result && $statement->rowCount() > 0){
 </style>
 </head>
 <body class="grey-bg">
-<?php include('inc/navbar.inc.php'); ?>
+<?php include('../inc/navbar.inc.php'); ?>
 
 <div class="this">
 <div class="container">

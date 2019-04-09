@@ -1,5 +1,5 @@
 <!-- Navbar -->
-  <nav class=" blue darken-3" role="navigation">
+  <nav class=" blue darken-3 z-depth-0" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="/" class="brand-logo"><img class="nav-img" src="/static/logos/white-32.png"></a>
       <ul class="right hide-on-med-and-down">

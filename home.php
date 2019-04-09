@@ -52,14 +52,14 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
     if ($result && $statement->rowCount() > 0) {
         foreach ($result as $row) { ?>
 
-      <a style="text-decoration:none;" href="<?php echo str_replace(' ', '_', escape($row['title'])); ?>">
+      <a style="text-decoration:none;" href="<?php echo escape(str_replace(' ', '_', $row['title'])); ?>">
     <div class="page">
       <div class="content">
       <h5><?= escape($row['title']) ?></h5>
         <p><?= escape($row['content']) ?></p></div>
       <div class="page-bottom">
         <img class="pfp" src="https://apis.buncode.com/pages/pfp/<?= escape(getUserInfo($row['username'])[0]['profile_pic']); ?>">
-        <span class="pfp-text"><a class="user-link" href="user.php?username=<?= escape($row['username']) ?>"><?= escape(getUserInfo($row['username'])[0]['name']); ?></a> <span class="pfp-date">
+        <span class="pfp-text"><a class="user-link" href="/u/<?= escape($row['username']) ?>"><?= escape(getUserInfo($row['username'])[0]['name']); ?></a> <span class="pfp-date">
             <?php $tags = explode(":",$row['tags']); foreach ($tags as $tag) { ?>
                 <span class="tag"><?= escape($tag) ?></span>
             <?php } ?>
