@@ -1,7 +1,7 @@
 <?php
 $host       = "sql135.main-hosting.eu.";
 $username   = "u611188077_pages";
-$password   = "jboedJ1&41h~~!++|o";
+$password   = "&h5f*23^:j[;w4xh2M";
 $dbname     = "u611188077_pages";
 $dsn        = "mysql:host=$host;dbname=$dbname";
 $options    = array(
