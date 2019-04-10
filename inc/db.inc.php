@@ -1,8 +1,8 @@
 <?php
-$host       = "sql135.main-hosting.eu.";
-$username   = "u611188077_pages";
-$password   = "$][NuqxU]0Tsf5]Akv";
-$dbname     = "u611188077_pages";
+$host       = "localhost";
+$username   = "username";
+$password   = "password";
+$dbname     = "dbname";
 $dsn        = "mysql:host=$host;dbname=$dbname";
 $options    = array(
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
