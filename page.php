@@ -84,7 +84,7 @@ $date = date_create($result[0]['date']);
       <?php echo escape($result[0]['content']); ?>
   </p>
   </div>
-    
+</div>    
     
 <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="/static/js/materialize.min.js"></script>
