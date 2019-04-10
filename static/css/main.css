@@ -435,6 +435,11 @@ a {
         background-size: auto;
     }
 }
+@media screen and (max-width: 600px) {
+    .nav-img{
+        padding:12px;
+    }
+}
 @media screen and (max-width: 550px) {
     .this .pages {
         margin:0;
