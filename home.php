@@ -61,9 +61,9 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
       <div class="page-bottom">
         <img class="pfp" src="https://apis.buncode.com/pages/pfp/<?= escape(getUserInfo($row['username'])[0]['profile_pic']); ?>">
         <span class="pfp-text"><a class="user-link" href="/u/<?= escape($row['username']) ?>"><?= escape(getUserInfo($row['username'])[0]['name']); ?></a> <span class="pfp-date">
-            <?php $tags = explode(":",$row['tags']); foreach ($tags as $tag) { ?>
+            <?php if(empty($row['tags'])){ }else{ $tags = explode(":",$row['tags']); foreach ($tags as $tag) { ?>
                 <span class="tag"><?= escape($tag) ?></span>
-            <?php } ?>
+            <?php } } ?>
             </span></span></div>
     </div></a>
       <?php

@@ -19,7 +19,7 @@ try {
 } catch(PDOException $error) {
 echo $sql . "<br />" . $error->getMessage();
 	}
-echo escape($postLink);
+//echo escape($postLink);
 // --- Title --- //
 $title = escape($result[0]['title']);
 // --- Tags --- //
@@ -57,13 +57,13 @@ $date = date_create($result[0]['date']);
     
 <div class="page-content this">
     <div class="top-area">
-        <div class="back" style="margin:1rem 0 .5rem 0;"><a href="/home.php">Back</a></div>
+        <div class="back" style="margin:1.5rem 0 0 0;"><a href="/home.php">Back</a></div>
         <h3 class="normal-title"><?php echo $title; ?></h3>
         
         <div class="tag-area">
-            <?php foreach ($tags as $tag){ ?>
-          <span class="tag"><?php echo escape($tag); ?></span>
-            <?php } ?>
+            <?php if(empty($result[0]['tags'])){ }else{  foreach ($tags as $tag) { ?>
+                <span class="tag"><?= escape($tag) ?></span>
+            <?php } } ?>
         </div>
             <div class="user-info-area">
             <a href="/u/<?= $Username ?>">
