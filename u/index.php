@@ -110,13 +110,7 @@ $result = getUserPosts($username);
         }
     }else{ //no pages
     ?>
-        <h4 class="center red-text text-darken-4">No pages to show</h4>
-        <h6 class="center">Try refreshing the page or create one.</h6>
-        <br />
-        <div class="center">
-            <a class="btn blue darken-2" href="/">Home</a>
-            <a class="btn blue darken-2" href="<?= $_SERVER["REQUEST_URI"] ?>">Reload</a>
-        </div>
+        <h5 class="center grey-text">No pages to show</h5>
     <?php
     }
     ?>
