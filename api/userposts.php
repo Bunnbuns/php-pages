@@ -21,9 +21,10 @@ $Username = $_GET['username'];
         }
 
     if ($result && $statement->rowCount() > 0) {
-        foreach ($result as $row) { ?>
-
-    <a style="text-decoration:none;" href="/<?php echo str_replace(' ', '-', str_replace('_', '_', escape($row['title']))); ?>">
+        foreach ($result as $row) { 
+            $postLink = str_replace(' ', '_', escape($row['title']));
+    ?>
+    <a style="text-decoration:none;" href="/<?= $postLink ?>">
         <div class="page">
             <div class="content">
                 <h5><?= escape($row['title']) ?></h5>
