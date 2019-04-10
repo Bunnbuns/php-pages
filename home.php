@@ -50,9 +50,10 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
       <!--<div class="note-light yellow-bg" style="margin-bottom:.5rem;font-weight:500;">Pages is not completed! Check back later.</div>-->
     <?php 
     if ($result && $statement->rowCount() > 0) {
-        foreach ($result as $row) { ?>
-
-      <a style="text-decoration:none;" href="<?php echo str_replace(' ', '-', str_replace('_', '_', escape($row['title']))); ?>">
+        foreach ($result as $row) {
+          $postLink = str_replace(' ', '_', escape($row['title']));
+        ?>
+      <a style="text-decoration:none;" href="<?= $postLink  ?>">
     <div class="page">
       <div class="content">
       <h5><?= escape($row['title']) ?></h5>

@@ -8,18 +8,18 @@ try {
     $connection = new PDO($dsn, $username, $password, $options);
     $sql = "SELECT `id`, `username`, `date`, `title`, `content`, `tags` 
                     FROM pages 
-                    WHERE title = :title
+                    WHERE title = :postLink
                     ";
-    $title = str_replace('-', '_', str_replace('-', ' ', trim(urldecode($_SERVER["REQUEST_URI"]),'/')));
+    $postLink = str_replace('_', ' ', trim(urldecode($_SERVER["REQUEST_URI"]),'/'));
     
     $statement = $connection->prepare($sql);
-    $statement->bindParam(':title', $title, PDO::FETCH_ASSOC);
+    $statement->bindParam(':postLink', $postLink, PDO::FETCH_ASSOC);
     $statement->execute();
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 } catch(PDOException $error) {
 echo $sql . "<br />" . $error->getMessage();
 	}
-echo escape($title);
+echo escape($postLink);
 // --- Title --- //
 $title = escape($result[0]['title']);
 // --- Tags --- //
