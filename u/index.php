@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1); 
 include('../inc/common.inc.php');
-include('../inc/db.inc.php');
+include('../../db.inc.php');
 
 try {
 $connection = new PDO($dsn, $username, $password, $options);
