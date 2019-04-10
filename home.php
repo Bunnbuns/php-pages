@@ -74,7 +74,7 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
         <br />
         <div class="center">
             <a class="btn blue darken-2" href="/">Home</a>
-            <a class="btn blue darken-2" href="<?= basename($_SERVER["SCRIPT_FILENAME"], '.php') ?>.php">Reload</a>
+            <a class="btn blue darken-2" href="<?= $_SERVER["REQUEST_URI"] ?>">Reload</a>
         </div>
     <?php
     }
@@ -94,7 +94,7 @@ $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 -->
     </div>
 </div>
-
+<br />
 
 <script type="text/javascript" src="/static/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="/static/js/materialize.min.js"></script>

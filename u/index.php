@@ -74,11 +74,53 @@ if($result && $statement->rowCount() > 0){
     <div class="center">
         <a class="btn blue darken-2" href="/">Home</a>
     </div>
-<?php
-    }
-?>
+<?= 
+die;
+    } ?>
 </div>
-    
+<?php
+//use username to get all of their posts
+//need to make this happen after page loads with js
+$result = getUserPosts($username);
+?>
+<br />
+<div class="divider"></div>
+    <h5 style="margin: 1rem 0 .25rem 0;">Pages</h5>
+  <div class="section">
+
+      <!--<div class="note-light yellow-bg" style="margin-bottom:.5rem;font-weight:500;">Pages is not completed! Check back later.</div>-->
+    <?php 
+    if ($result && $statement->rowCount() > 0) {
+        foreach ($result as $row) { ?>
+
+      <a style="text-decoration:none;" href="/<?php echo str_replace(' ', '-', str_replace('_', '_', escape($row['title']))); ?>">
+    <div class="page">
+      <div class="content">
+      <h5><?= escape($row['title']) ?></h5>
+        <p><?= escape($row['content']) ?></p></div>
+      <div class="page-bottom">
+        <img class="pfp" src="https://apis.buncode.com/pages/pfp/<?= escape(getUserInfo($row['username'])[0]['profile_pic']); ?>">
+        <span class="pfp-text"><a class="user-link" href="/u/<?= escape($row['username']) ?>"><?= escape(getUserInfo($row['username'])[0]['name']); ?></a> <span class="pfp-date">
+            <?php $tags = explode(":",$row['tags']); foreach ($tags as $tag) { ?>
+                <span class="tag"><?= escape($tag) ?></span>
+            <?php } ?>
+            </span></span></div>
+    </div></a>
+      <?php
+        }
+    }else{ //no pages
+    ?>
+        <h4 class="center red-text text-darken-4">No pages to show</h4>
+        <h6 class="center">Try refreshing the page or create one.</h6>
+        <br />
+        <div class="center">
+            <a class="btn blue darken-2" href="/">Home</a>
+            <a class="btn blue darken-2" href="<?= $_SERVER["REQUEST_URI"] ?>">Reload</a>
+        </div>
+    <?php
+    }
+    ?>
+    </div>
 <!--
         <div class="page">
           <div class="content">
