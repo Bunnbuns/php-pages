@@ -1,7 +1,7 @@
 <?php
 // LOGIN //
-include('../inc/common.inc.php');
-include('../inc/db.inc.php');
+include('../../inc/common.inc.php');
+include('../../inc/db.inc.php');
 
 // LOGIN //
 ?>
@@ -29,7 +29,7 @@ include('../inc/db.inc.php');
 </style>
 </head>
 <body class="grey-bg">
-<?php include('../inc/navbar.inc.php'); ?>
+<?php include('../../inc/navbar.inc.php'); ?>
 
 <div class="container">
     <h4 class="form-title center">Login</h4>

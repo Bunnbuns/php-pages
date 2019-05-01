@@ -1,5 +1,5 @@
 <?php
-include('inc/common.inc.php');
+require_once('inc/common.inc.php');
 
 ?>
 <!doctype html>
